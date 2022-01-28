@@ -7,14 +7,7 @@ using System.Threading.Tasks;
 
 namespace FlockVisualiser.ViewModels
 {
-    public class ShellViewModel : Conductor<object>
+    public class ControlsViewModel : Screen
     {
-
-        public ControlsViewModel ControlsVM { get; set; } = new ControlsViewModel();
-
-
-
-
-
     }
 }
