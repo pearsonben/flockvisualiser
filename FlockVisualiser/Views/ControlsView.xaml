@@ -9,7 +9,7 @@
     d:DesignHeight="200"
     d:DesignWidth="1000"
     mc:Ignorable="d">
-    <Grid Background="LightGray">
+    <Grid>
 
         <UniformGrid Columns="7" Rows="1">
 
