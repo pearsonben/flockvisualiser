@@ -44,9 +44,9 @@
                 <DataTemplate>
 
                     <Image
-                        Width="64"
-                        Height="64"
-                        Source="C:\Users\pears\Documents\Projects\FlockVisualiser\FlockVisualiser\Boids\Icons\Boid.png" />
+                        Width="24"
+                        Height="24"
+                        Source="{Binding ImageSource}" />
 
                 </DataTemplate>
             </ItemsControl.ItemTemplate>

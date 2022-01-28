@@ -16,7 +16,7 @@ namespace FlockVisualiser.ViewModels
             Random rnd = new Random();
 
             GameEntities.Add(
-                new TestBoid { Angle = rnd.Next(0, 360), XPos = rnd.Next(100, 500), YPos = rnd.Next(100, 500) }
+                new TestBoid { Angle = rnd.Next(0, 360), XPos = rnd.Next(100, 1300), YPos = rnd.Next(100, 600) }
                 );
         }
 

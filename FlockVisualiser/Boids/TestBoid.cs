@@ -11,8 +11,7 @@ namespace FlockVisualiser.Boids
 
         public int XPos { get; set; }
         public int YPos { get; set; }
-
-        public string ImageSource { get { return "/AssemblyName;component/Boids/Icons/Boid.png"; }  }
+        public string ImageSource { get { return @"C:\Users\pears\Documents\Projects\FlockVisualiser\FlockVisualiser\Boids\Icons\Boid.png"; }  }
 
         public double Angle { get; set; }
 
