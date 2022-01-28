@@ -10,40 +10,50 @@
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
 
-    <ItemsControl ItemsSource="{Binding GameEntities}">
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <Canvas
-                    x:Name="BoardCanvas"
-                    Width="1400"
-                    Height="800" />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
+        <Button x:Name="AddBoid" Content="Add Boid" />
 
-        <ItemsControl.ItemContainerStyle>
-            <Style TargetType="ContentPresenter">
-                <Setter Property="Canvas.Left" Value="{Binding Path=XPos, Mode=TwoWay}" />
-                <Setter Property="Canvas.Top" Value="{Binding Path=YPos, Mode=TwoWay}" />
-                <Setter Property="LayoutTransform">
-                    <Setter.Value>
-                        <RotateTransform Angle="{Binding Angle}" />
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </ItemsControl.ItemContainerStyle>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding GameEntities}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas
+                        x:Name="BoardCanvas"
+                        Width="1400"
+                        Height="800" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
 
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                    <Setter Property="Canvas.Left" Value="{Binding Path=XPos, Mode=TwoWay}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Path=YPos, Mode=TwoWay}" />
+                    <Setter Property="LayoutTransform">
+                        <Setter.Value>
+                            <RotateTransform Angle="{Binding Angle}" />
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ItemsControl.ItemContainerStyle>
 
-                <Image
-                    Width="24"
-                    Height="24"
-                    Source="C:\Users\pears\Documents\Projects\FlockVisualiser\FlockVisualiser\Boids\Icons\Boid.png" />
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
 
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-    </ItemsControl>
+                    <Image
+                        Width="64"
+                        Height="64"
+                        Source="C:\Users\pears\Documents\Projects\FlockVisualiser\FlockVisualiser\Boids\Icons\Boid.png" />
+
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </Grid>
+
 
 
 </UserControl>
