@@ -5,15 +5,61 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:FlockVisualiser.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    d:DesignHeight="450"
-    d:DesignWidth="800"
+    d:DesignHeight="200"
+    d:DesignWidth="1000"
     mc:Ignorable="d">
-    <Grid Background="red">
+    <Grid Background="LightGray">
 
-        <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Text="Controls View" />
+        <UniformGrid Columns="7" Rows="1">
+
+            <!--  Range Slider  -->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" Text="Range" />
+                <Slider Width="150" Orientation="Horizontal" />
+            </StackPanel>
+
+            <!--  Alignment Slider  -->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" Text="Alignment" />
+                <Slider Width="150" Orientation="Horizontal" />
+            </StackPanel>
+
+            <!--  Cohesion Slider  -->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" Text="Cohesion" />
+                <Slider Width="150" Orientation="Horizontal" />
+            </StackPanel>
+
+            <!--  Separation Slider  -->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" Text="Separation" />
+                <Slider Width="150" Orientation="Horizontal" />
+            </StackPanel>
+
+            <!--  Speed Slider  -->
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Center" Text="Speed" />
+                <Slider Width="150" Orientation="Horizontal" />
+            </StackPanel>
+
+
+        </UniformGrid>
+
 
 
     </Grid>
