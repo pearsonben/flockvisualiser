@@ -18,7 +18,9 @@
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
 
+        <ContentControl x:Name="GameBoardVM" Grid.Row="1" />
         <ContentControl x:Name="ControlsVM" Grid.Row="2" />
+
 
     </Grid>
 </Window>

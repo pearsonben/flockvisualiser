@@ -11,7 +11,6 @@
                 <ui:XamlControlsResources />
 
                 <ResourceDictionary>
-                    <ui:IntellisenseResources Source="/ModernWpf;component/DesignTime/DesignTimeResources.xaml" />
                     <local:Bootstrapper x:Key="bootstrapper" />
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>

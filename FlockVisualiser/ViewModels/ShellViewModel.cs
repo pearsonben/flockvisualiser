@@ -11,6 +11,7 @@ namespace FlockVisualiser.ViewModels
     {
 
         public ControlsViewModel ControlsVM { get; set; } = new ControlsViewModel();
+        public GameBoardViewModel GameBoardVM { get; set; } = new GameBoardViewModel();
 
 
 
