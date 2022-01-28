@@ -7,15 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.modernwpf.com/2019"
     Title="flockvisualiser"
-    Width="1920"
-    Height="1080"
+    Width="1400"
     ui:WindowHelper.UseModernWindowStyle="True"
     mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="60" />
         </Grid.RowDefinitions>
 
         <ContentControl x:Name="GameBoardVM" Grid.Row="1" />

@@ -8,8 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Boids\Icons\Boid.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Boids\Icons\Boid.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="4.0.173" />
     <PackageReference Include="ModernWpfUI" Version="0.9.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Geometry\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
 
 </Project>

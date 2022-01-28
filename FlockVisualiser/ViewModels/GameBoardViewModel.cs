@@ -10,6 +10,12 @@ namespace FlockVisualiser.ViewModels
     public class GameBoardViewModel : Screen
     {
 
+        public GameBoardViewModel()
+        {
+
+        }
+
+
 
 
     }
