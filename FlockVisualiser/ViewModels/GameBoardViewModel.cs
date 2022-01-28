@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using System.Drawing;
 namespace FlockVisualiser.ViewModels
 {
     public class GameBoardViewModel : Screen
@@ -15,30 +16,38 @@ namespace FlockVisualiser.ViewModels
         {
             Random rnd = new Random();
 
-            GameEntities.Add(
-                new TestBoid { Angle = rnd.Next(0, 360), XPos = rnd.Next(100, 1300), YPos = rnd.Next(100, 600) }
-                );
+            GameEntities.Add(new DynamicBoid
+            {
+                CurrentPosition = new Point(rnd.Next(100, 1300), rnd.Next(100, 600)),
+                CurrentAngle = rnd.Next(0, 360)
+            });
+
+            // GameEntities.Add(
+            //   new TestBoid { Angle = rnd.Next(0, 360), XPos = rnd.Next(100, 1300), YPos = rnd.Next(100, 600) }
+            //);
         }
+        public BindableCollection<IBoidBase> GameEntities { get; set; } = new BindableCollection<IBoidBase>();
 
         public string TestText { get; set; } = "GameBoarDViewModel";
 
-        public BindableCollection<TestBoid> GameEntities { get; set; } = new BindableCollection<TestBoid>()
-            {
-                new TestBoid{ Angle = 45, XPos = 100, YPos = 100 },
-                new TestBoid{ Angle = 90, XPos = 400, YPos = 300 }
-            };
 
         public DispatcherTimer GameTimer { get; set; } = new DispatcherTimer();
 
         public GameBoardViewModel()
         {
 
-
-            //GameEntities
+            GameEntities.Add(new DynamicBoid
+            {
+                CurrentPosition = new Point(300,500),
+                
+                CurrentAngle = 0
+            });
+            
 
             GameTimer.Tick += GameEngine;
             GameTimer.Interval = TimeSpan.FromMilliseconds(20);
             GameTimer.Start();
+
 
         }
 
@@ -47,10 +56,11 @@ namespace FlockVisualiser.ViewModels
             
             foreach(var entity in GameEntities)
             {
-                entity.XPos += 1;
-                entity.YPos += 1;
-                //entity.Angle += 1;
+                
+                entity.Rotate(1);
+
             }
+            GameEntities.Refresh();
 
 
         }

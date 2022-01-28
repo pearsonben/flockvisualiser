@@ -30,8 +30,8 @@
 
             <ItemsControl.ItemContainerStyle>
                 <Style TargetType="ContentPresenter">
-                    <Setter Property="Canvas.Left" Value="{Binding Path=XPos, Mode=TwoWay}" />
-                    <Setter Property="Canvas.Top" Value="{Binding Path=YPos, Mode=TwoWay}" />
+                    <Setter Property="Canvas.Left" Value="{Binding Path=CurrentPosition.X, Mode=TwoWay}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Path=CurrentPosition.Y, Mode=TwoWay}" />
                     <Setter Property="LayoutTransform">
                         <Setter.Value>
                             <RotateTransform Angle="{Binding Angle}" />

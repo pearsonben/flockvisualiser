@@ -7,11 +7,21 @@ using System.Threading.Tasks;
 
 namespace FlockVisualiser.Boids
 {
-    public class BoidBase
+    public class BoidBase : IBoidBase
     {
 
         public Point CurrentPosition { get; set; }
         public double CurrentAngle { get; set; } = 0;
+
+        public void MoveX(int increment)
+        {
+            
+        }
+
+        public void MoveY(int increment)
+        {
+
+        }
 
         public void Rotate(double rotationAngle)
         {
@@ -19,7 +29,8 @@ namespace FlockVisualiser.Boids
             CurrentAngle = TransformAngle(CurrentAngle);
         }
 
-        private double TransformAngle(double angle)
+
+        public double TransformAngle(double angle)
         {
             while (angle > 180)
             {
