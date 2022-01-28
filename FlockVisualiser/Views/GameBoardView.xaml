@@ -11,9 +11,39 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <Grid Background="LightGray">
-        <Canvas x:Name="Board" />
-    </Grid>
+    <ItemsControl ItemsSource="{Binding GameEntities}">
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <Canvas
+                    x:Name="BoardCanvas"
+                    Width="1400"
+                    Height="800" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+
+        <ItemsControl.ItemContainerStyle>
+            <Style TargetType="ContentPresenter">
+                <Setter Property="Canvas.Left" Value="{Binding Path=XPos, Mode=TwoWay}" />
+                <Setter Property="Canvas.Top" Value="{Binding Path=YPos, Mode=TwoWay}" />
+                <Setter Property="LayoutTransform">
+                    <Setter.Value>
+                        <RotateTransform Angle="{Binding Angle}" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ItemsControl.ItemContainerStyle>
+
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+
+                <Image
+                    Width="24"
+                    Height="24"
+                    Source="C:\Users\pears\Documents\Projects\FlockVisualiser\FlockVisualiser\Boids\Icons\Boid.png" />
+
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
 
 
 </UserControl>
